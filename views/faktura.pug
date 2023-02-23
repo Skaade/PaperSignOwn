@@ -1,0 +1,36 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  style 
+    include faktura.css
+    include common.css
+  script(src='logik.js')
+  title PaperSign
+.tabbtn
+  form(action = "/faktura" method="get")
+    input#tabSelect(class="button" type="submit" value="Faktura")
+  form(action= "/crud" method="get")
+    input(class="button" type="submit" value="Produkter")
+  form(action = "/underskrift" method="get")
+    input(class="button" type="submit" value="Underskrift")
+br
+.dateDiv
+  input#ordreDate1(type="date", name="ordreDate" onchange="this.form.submit()" value=date)
+  form(action="faktura" method="get") 
+    input#ordreDate2(type="date", name="ordreDate" onchange="this.form.submit()" value=date)
+.odreoversigt 
+  .ordrelinjerOverskrift
+    .overskrift Ordrenr
+    .overskrift Dato
+    .overskrift Total
+  .ordrelinjer
+    each data in ordrer
+      .div5(onclick='location.href=/ordre/'+data.docID+'') 
+        a#ordrecontent(class='productHeader' href='/ordre/'+ data.docID +'')= data.ordreNr
+        a#ordrecontent(class='productHeader' href='/ordre/'+ data.docID +'')=data.dato
+        a#ordrecontent(class='productHeader' href='/ordre/'+ data.docID +'')=data.samletpris+",-"
+  .ordrelinjerBund
+#psLogo
+  img(src='/images/papersignLogo.png') 

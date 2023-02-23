@@ -1,0 +1,114 @@
+ /* unvisited link */
+
+ a {
+   height: 100%;
+ }
+
+ .vareattributter {
+   margin: 8px;
+   border: 1px solid var(--border-color);
+   height: 74.5%;
+   /* box-shadow: 0 2px 4px -0px black; */
+   background-color: white;
+   border-radius: 5px;
+ }
+
+ #info {
+   padding: 10px;
+ }
+
+ .div2 {
+   display: grid;
+   grid-template-columns: repeat(3, 13.22%);
+   grid-template-rows: repeat(1, 71%);
+   grid-column-gap: 2.5px;
+   grid-row-gap: 2px;
+   font-size: 100%;
+   padding: 4px;
+   margin: 4px;
+   height: 7.4%;
+   width: 74%;
+ }
+
+ .overskrifter {
+   display: grid;
+   grid-template-columns: repeat(7, 14.93%);
+   grid-column-gap: 2px;
+   grid-row-gap: 2px;
+   border-bottom: 1px solid var(--border-color);
+   height: 3.5%;
+   width: 98.75%;
+   padding: 10px;
+   grid-column-start: 1;
+   grid-column-end: 8;
+ }
+
+ .soegeresultater {
+   display: block;
+   /* grid-template-columns: repeat(7, 14.9%); */
+   grid-column-gap: 0px;
+   row-gap: 0px;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   height: 86%;
+   grid-column-start: 1;
+   grid-column-end: 8;
+   padding: 0px;
+   margin: 0px;
+ }
+
+ .soegeresultat {
+   display: grid;
+   grid-template-columns: repeat(7, 14.93%);
+   /* grid-template-rows: repeat(100, 100%); */
+   grid-column-gap: 2px;
+   grid-row-gap: 2px;
+   margin: 0px;
+   padding: 0px;
+   grid-column-start: 1;
+   grid-column-end: 8;
+   height: 8%;
+   width: 100%;
+ }
+/* 
+ grid-template-rows: repeat(1, 5%);
+ grid-column-gap: 2px;
+ padding: 7px;
+ margin: 0px;
+ grid-row-gap: 0px;
+ grid-column-start: 1;
+ grid-column-end: 4;
+ width: 100%;
+ height: 4%; 
+ */
+
+ .soegeresultat:hover {
+
+   background-color: var(--background-color-hover);
+   color: white;
+   /* border-bottom: 2px solid black; */
+ }
+
+ .soegeresultater>.soegeresultat:nth-child(even) {
+   background-color: rgb(248, 248, 248);
+ }
+
+ .soegeresultater>.soegeresultat:nth-child(even):hover {
+   background-color: var(--background-color-hover);
+ }
+
+ .soegeresultat:hover>#info {
+   color: white;
+ }
+
+ body {
+   overflow: hidden;
+ }
+
+ .bund {
+   grid-column-gap: 2px;
+   grid-row-gap: 2px;
+   border-top: 1px solid var(--border-color);
+   padding: 2px;
+   width: 99.8%;
+ }

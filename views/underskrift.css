@@ -1,0 +1,71 @@
+#sig {
+    border: 1px rgb(133, 133, 133);
+    margin: 8px;
+    padding: 8px;
+    border-style: solid;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.funct {
+    display: grid;
+    grid-template-columns: repeat(4, 154px);
+    grid-template-rows: repeat(8, 20%);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    margin: 4px;
+    padding: 3px;
+}
+
+#vareList {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+
+#total {
+    grid-row-start: 5;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    text-align: right;
+}
+
+.underskrift {
+    /* margin: 1px;
+    padding: 1px;    */
+}
+
+#tabTitle2 {
+    margin: 4px;
+    padding: 6px;
+    height: 5.5%;
+    font-size: 195%;
+}
+
+
+@media (max-width: 800px) {
+    .odreoversigt {
+      padding: 0px;
+      margin: 8px;
+      border: 2px solid black;
+      height: 100%;
+      overflow: hidden;
+      font-size: 125%;
+      background-image: linear-gradient(white, rgb(199, 199, 199));
+      box-shadow: 0 2px 4px -0px black;
+    }
+  }
+  
+  @media (min-width: 801px) {
+    .odreoversigt {
+      padding: 0px;
+      margin: 8px;
+      border: 2px solid black;
+      height: 100%;
+      overflow: hidden;
+      font-size: 125%;
+      background-image: linear-gradient(white, rgb(199, 199, 199));
+      box-shadow: 0 2px 4px -0px black;
+    }
+  }

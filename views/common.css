@@ -1,0 +1,251 @@
+/* Root */
+
+:root {
+    /* background */
+    --background-color: rgb(0, 126, 167);
+    --background-color-hover: rgb(17, 144, 186);
+    --background-text-color: white;
+    /* font */
+    --font-all: 100%;
+    --font-title: 200%;
+    /* other */
+    --border-color: rgb(133, 133, 133);
+    --focus-outline-color: rgb(112, 112, 112);
+
+}
+
+/* Select / Option */
+select:not(#atribut):focus option:checked {
+    background: var(--background-color-hover) linear-gradient(0deg, var(--background-color-hover) 0%, var(--background-color-hover) 100%);
+}
+
+option:hover {
+    background-color: var(--background-color-hover);
+}
+
+
+
+option,
+input,
+#atribut {
+    padding: 7px;
+}
+
+/* Font */
+
+body {
+    font-family: 'SF Pixelate', sans-serif;
+}
+
+/* Border and styling */
+
+input:not(.tabbtn input),
+button,
+select {
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+select[multiple] {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+:focus {
+    outline: none;
+}
+
+/* Tab Buttons */
+
+@media (max-width: 800px) {
+    .tabbtn {
+        display: grid;
+        grid-template-columns: repeat(6, 22%);
+        /* grid-column-gap: 2px; */
+        grid-row-gap: 2px;
+        background-color: var(--background-color);
+        height: 10%;
+        width: 100%;
+        box-shadow: 0 4px 10px -0px gray;
+        /* box-sizing: border-box;
+        padding: 5px;
+        margin: 0; */
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(2, 51%);
+        grid-template-rows: repeat(1, 100px);
+        grid-column-gap: 2px;
+        grid-row-gap: 2px;
+        margin: 4px;
+        padding: 4px;
+    }
+
+    p,
+    input,
+    button,
+    select {
+        font-size: 85%;
+    }
+}
+
+@media (min-width: 801px) {
+    .tabbtn {
+        display: grid;
+        grid-template-columns: repeat(6, 10%);
+        /* grid-column-gap: 2px; */
+        grid-row-gap: 2px;
+        background-color: var(--background-color);
+        height: 10%;
+        width: 100%;
+        box-shadow: 0 4px 10px -0px rgb(166, 166, 166);
+        /* box-sizing: border-box;
+        padding: 5px;
+        margin: 0; */
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(2, 33%);
+        grid-template-rows: repeat(1, 100px);
+        grid-column-gap: 2px;
+        grid-row-gap: 2px;
+        margin: 4px;
+        padding: 4px;
+    }
+
+
+    p,
+    input,
+    button,
+    select {
+        font-size: 100%;
+        font-weight: lighter;
+    }
+
+}
+
+.tabbtn input {
+    /* margin: 2px; */
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    color: white;
+    border: 0px;
+    font-size: 90%;
+}
+
+.tabbtn input:hover {
+    /* margin: 2px; */
+    background-color: var(--background-color-hover);
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+#tabSelect {
+    background-color: var(--background-color-hover);
+    /* border-left: 5px solid white; */
+}
+
+/* Background */
+
+body {
+    background-image: linear-gradient(rgb(252, 252, 252), rgb(247, 247, 247));
+    background-attachment: fixed;
+    height: 100%;
+}
+
+/* Set number inputs to have no arrows */
+/* others */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* .dark-mode {
+    background-image: linear-gradient(rgb(43, 43, 43), rgb(23, 23, 23));
+    background-attachment: fixed;
+    height: 100%;
+    color: white;
+} */
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* PaperSign Logo */
+
+#psLogo {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+
+#psLogo img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 57.5px;
+    width: 120.5px;
+}
+
+/* Links */
+
+a:link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* TODO TAB buttons */
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+/* TODO render view animations */
+
+/* TODO render list animations */
+
+.blankspace{
+    height: 2.4%;
+}
